@@ -1,5 +1,3 @@
-This repository is to learn important **Design Patterns** in **Java**. It is splitted into 3 parts.
-
 # Design Patterns
 
 > Design patterns are reusable solutions to common software design problems. They provide templates or blueprints for structuring code in a way that promotes scalability, maintainability, and flexibility. These patterns encapsulate best practices and principles of object-oriented design, making it easier for developers to communicate and collaborate effectively. [_chatGPT_](https://chat.openai.com/)
