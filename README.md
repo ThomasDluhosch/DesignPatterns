@@ -6,7 +6,7 @@
 
 ## 1.1 Factory Pattern
 
-    The Factory Pattern is a creational design pattern that provides an interface or method to create objects in a superclass but allows subclasses to alter the type of objects that will be created. This pattern decouples the object creation process from the client.
+The Factory Pattern is a creational design pattern that provides an interface or method to create objects in a superclass but allows subclasses to alter the type of objects that will be created. This pattern decouples the object creation process from the client.
 
 <div align="center" style="width: 100%;">
 
@@ -57,7 +57,7 @@ This pattern typically consits of the following components:
 
 ## 1.4 Builder Pattern
 
-    The Builder Pattern is a creational design pattern that simplifies the creation of complex objects. It is particularly useful when an object is composed of multiple components or requires various configurations to suit different use cases.
+The Builder Pattern is a creational design pattern that simplifies the creation of complex objects. It is particularly useful when an object is composed of multiple components or requires various configurations to suit different use cases.
 
 <div align="center" style="width: 100%;">
 
