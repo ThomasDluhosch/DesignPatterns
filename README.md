@@ -6,7 +6,7 @@
 
 ## 1.1 Factory Pattern
 
-The Factory Pattern is a creational design pattern that provides an interface or method to create objects in a superclass but allows subclasses to alter the type of objects that will be created. This pattern decouples the object creation process from the client.
+The Factory Pattern provides an interface or method to create objects in a superclass but allows subclasses to alter the type of objects that will be created. This pattern decouples the object creation process from the client.
 
 <div align="center" style="width: 100%;">
 
@@ -51,18 +51,62 @@ This pattern typically consits of the following components:
 
 ![UML Diagramm of the code example for the factory pattern](Assets/FactoryPattern.png)
 
+<br/>
+
 ## 1.2 Abstract Factory Pattern
 
-## 1.3 Prototype Pattern
-
-The Prototype Pattern is a creational design pattern that is used to create new objects by copying/cloning an existing object (prototype). The new object is created as a clone of the prototype. It is useful when creating an object from scratch is resource-intensive or complex.
+The Abstract Factory Pattern provides an interface for creating families of related/dependent object without specifying their concrete classes. It allows a system to use multiple "families" of objects interchangeably by encapsulating the creation logic in factory classes.
 
 <div align="center" style="width: 100%;">
 
 <table style="width: 100%;">
     <tr>
-        <th style="text-align:center">Advantages</th>
-        <th style="text-align:center">Disadvantages</th>
+        <th style="text-align:center; width:50%">Advantages</th>
+        <th style="text-align:center; width:50%">Disadvantages</th>
+    </tr>
+    <tr>
+        <td align="center">Flexibility/ Encapsulation/Scalability</td>
+        <td align="center">Too many products/factories can make the codebase difficult to manage</td>
+    </tr>
+    <tr>
+        <td align="center">Single Responsibility Principle</td>
+        <td align="center">May introduce additional layers of abstraction when simpler solutions might suffice for smaller applications.</td>
+    </tr>
+    <tr>
+        <td align="center">Open/Closed Principle</td>
+        <td align="center"></td>
+    </tr>
+</table>
+
+</div>
+
+### Structure
+
+-   **Abstract Factory**: Declares methods for creating abstract producs
+-   **Concrete Factory**: Implements creation methods for specific families of producs
+-   **Abstract Product**: Declares an interface for a type of product
+-   **Concrete Product**: Implements the product interface and defines the behavior for the specific product.
+
+### Example
+
+-   Factory.java is the abstract factory and declares the methods for the concrete factory
+-   FactoryMac.java and FactoryWin.java serves as the concrete factories
+-   Button.java and Checkbox.java are abstract products declaring the methods for an concrete product
+-   ButtonMac.java, ButtonWin.java, CheckboxMac.java and CHeckboxWin.java are the concrete products defining the behavior
+-   Application.java uses the concrete products to build an UI
+
+<br/>
+
+## 1.3 Prototype Pattern
+
+The Prototype Pattern is used to create new objects by copying/cloning an existing object (prototype). The new object is created as a clone of the prototype. It is useful when creating an object from scratch is resource-intensive or complex.
+
+<div align="center" style="width: 100%;">
+
+<table style="width: 100%;">
+    <tr>
+        <th style="text-align:center; width:50%">Advantages</th>
+        <th style="text-align:center; width:50%">Disadvantages</th>
     </tr>
     <tr>
         <td align="center">Reduces the cost of object creation</td>
@@ -92,9 +136,11 @@ The Prototype Pattern is a creational design pattern that is used to create new 
 
 -   Circle.java and Rectangle.java are concrete implementations of Shape
 
+<br/>
+
 ## 1.4 Builder Pattern
 
-The Builder Pattern is a creational design pattern that simplifies the creation of complex objects. It is particularly useful when an object is composed of multiple components or requires various configurations to suit different use cases.
+The Builder Pattern simplifies the creation of complex objects. It is particularly useful when an object is composed of multiple components or requires various configurations to suit different use cases.
 
 <div align="center" style="width: 100%;">
 
@@ -134,6 +180,8 @@ This pattern separates the construction process from the representation of an ob
 -   The ComputerBuilder.java class serves as the concrete builder, implementing the Builder interface
 -   The Director.java class orchestrates the building process
 -   The Computer.java class represents the product
+
+<br/>
 
 ## 1.5 Singelton Pattern (DON'T)
 
