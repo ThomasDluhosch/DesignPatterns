@@ -1,39 +1,106 @@
-# Design Patterns
+# **Design Patterns**
 
 > Design patterns are reusable solutions to common software design problems. They provide templates or blueprints for structuring code in a way that promotes scalability, maintainability, and flexibility. These patterns encapsulate best practices and principles of object-oriented design, making it easier for developers to communicate and collaborate effectively. [_chatGPT_](https://chat.openai.com/)
 
-## Architectural Design Patterns
+# Architectural Design Patterns
 
-### 1.1 Factory Pattern
-**What is it?** 
-- It provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
-- Create objects without specifying the exact class of object that will be created.
+## 1.1 Factory Pattern
 
-**When do i use it?**
-- If you want to decouple client code from the actual object creation process
+    The Factory Pattern is a creational design pattern that provides an interface or method to create objects in a superclass but allows subclasses to alter the type of objects that will be created. This pattern decouples the object creation process from the client.
 
-**Pros**
-- Avoid tight coupling between the creator and the concrete producs
-- Flexible, Maintainable code that is easy to extend
-- Single Responsibility Principle
-- Open/Close Principle
+<div align="center" style="width: 100%;">
 
-**Cons**
-- Code may become more complicated. Introduction of a lot of new subclasses to implement the pattern. 
+<table style="width: 100%;">
+    <tr>
+        <th style="text-align:center; width:50%">Advantages</th>
+        <th style="text-align:center; width:50%">Disadvantages</th>
+    </tr>
+    <tr>
+        <td align="center">Reusable</td>
+        <td align="center">Increased code complexity</td>
+    </tr>
+    <tr>
+        <td align="center">Flexible</td>
+        <td align="center">More subclasses</td>
+    </tr>
+    <tr>
+        <td align="center">Single Responsibility Principle</td>
+        <td align="center"></td>
+    </tr>
+        <tr>
+        <td align="center">Open/Closed Principle</td>
+        <td align="center"></td>
+    </tr>
+</table>
 
-**Example**
+</div>
+
+### Structure
+
+This pattern typically consits of the following components:
+
+-   **Product Interface**: Abstract class to ensure a consistent interface for all product types
+
+-   **Concrete Products**: Represents the actual objects
+
+-   **Factory Interface**: Declares the creation methods
+
+-   **Concrete Factories**: Implementation of creation logic for different Product types.
+
+### Example
 
 ![UML Diagramm of the code example for the factory pattern](Assets/FactoryPattern.png)
 
-### 1.2 Abstract Factory Pattern
+## 1.2 Abstract Factory Pattern
 
-### 1.3 Prototype Pattern
+## 1.3 Prototype Pattern
 
-### 1.4 Builder Pattern
+## 1.4 Builder Pattern
 
-### 1.5 Singelton Pattern (DON'T)
+    The Builder Pattern is a creational design pattern that simplifies the creation of complex objects. It is particularly useful when an object is composed of multiple components or requires various configurations to suit different use cases.
 
-## Structural Design Patterns
+<div align="center" style="width: 100%;">
+
+<table style="width: 100%;">
+    <tr>
+        <th style="text-align:center">Advantages</th>
+        <th style="text-align:center">Disadvantages</th>
+    </tr>
+    <tr>
+        <td align="center">Construct objects step-by-step</td>
+        <td align="center">Code complexity increases</td>
+    </tr>
+    <tr>
+        <td align="center">Reuse construction code</td>
+        <td align="center"></td>
+    </tr>
+    <tr>
+        <td align="center">Single Responsibility Principle</td>
+        <td align="center"></td>
+    </tr>
+</table>
+
+</div>
+
+### Structure
+
+This pattern separates the construction process from the representation of an object. It typically consits of the following components:
+
+-   **Builder**: Defines an interface with methods to build the object step by step
+-   **Concrete Builder**: A specific implementation of the Builder interface that assembles and constructs the object
+-   **Director**: Oversees and controls the building process
+-   **Product**: Final object that is created by the Builder
+
+### Example
+
+-   The Builder.java interface defines the methods required to construct an object
+-   The ComputerBuilder.java class serves as the concrete builder, implementing the Builder interface
+-   The Director.java class orchestrates the building process
+-   The Computer.java class represents the product
+
+## 1.5 Singelton Pattern (DON'T)
+
+# Structural Design Patterns
 
 ### 2.1 Adapter Pattern
 
