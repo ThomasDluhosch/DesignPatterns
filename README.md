@@ -55,6 +55,43 @@ This pattern typically consits of the following components:
 
 ## 1.3 Prototype Pattern
 
+The Prototype Pattern is a creational design pattern that is used to create new objects by copying/cloning an existing object (prototype). The new object is created as a clone of the prototype. It is useful when creating an object from scratch is resource-intensive or complex.
+
+<div align="center" style="width: 100%;">
+
+<table style="width: 100%;">
+    <tr>
+        <th style="text-align:center">Advantages</th>
+        <th style="text-align:center">Disadvantages</th>
+    </tr>
+    <tr>
+        <td align="center">Reduces the cost of object creation</td>
+        <td align="center">Requires careful implementation of cloning</td>
+    </tr>
+    <tr>
+        <td align="center">Simplifies object creation for complex systems</td>
+        <td align="center">Unintended consequences if mutable objects within the prototype are not handled properly</td>
+    </tr>
+    <tr>
+        <td align="center">Helps avoid subclass proliferation by reusing existing objects</td>
+        <td align="center"></td>
+    </tr>
+</table>
+
+</div>
+
+### Structure
+
+-   **Prototype Interface**: Defines clone() method
+
+-   **Concrete Prototype**: Implements the prototype interface
+
+### Example
+
+-   The Shape.java class is the Prototype Interface. It defines the Shape and the clone() method
+
+-   Circle.java and Rectangle.java are concrete implementations of Shape
+
 ## 1.4 Builder Pattern
 
 The Builder Pattern is a creational design pattern that simplifies the creation of complex objects. It is particularly useful when an object is composed of multiple components or requires various configurations to suit different use cases.
